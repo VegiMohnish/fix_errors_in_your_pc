@@ -1,0 +1,48 @@
+﻿How to solve initramfs error in ubuntu
+
+
+Hello guys,
+You are facing a busybox initramfs error on ubuntu. it’s an error that occurs due to file system error on ubuntu.
+
+
+  
+
+
+
+Follow these steps to solve ubuntu initramfs error
+
+
+Step 1: Type exit command
+$ exit
+
+
+Step 2: Modify your file structure using below command
+$ fsck /dev/sda
+$ fsck /dev/sda1
+$ fsck /dev/sda2
+$ fsck /dev/sda3
+$ fsck /dev/sda4
+
+
+Step 3: above any command want permission then press simply
+y
+
+
+Step 4: after modifying the structure of a file system
+reboot
+
+
+Some cases work exit instead of reboot
+exit
+
+
+
+
+
+
+
+
+
+
+   
+ THANKS!!!
