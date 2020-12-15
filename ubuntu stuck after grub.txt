@@ -1,0 +1,17 @@
+Go back to Grub , when you are at Ubuntu option press 'E' button. Now edit the first kernel displayed then find the line starting with Linux and add nomodeset 
+before quiet splash then press 'CTRL + X' to boot.
+
+This will start your ubuntu.
+
+Now open terminal in your Ubuntu by 'CTRL + ALT + T' and follow the below steps:
+1. sudo nano /etc/default/grub  -   this will open the nano containing some lines
+2. Now edit the last but one line as   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+
+then save by hitting 'CTRL + O' then exit nano by 'CTRL + X'.
+3. after that run   sudo update-grub in your terminal.
+
+
+
+Link for this:
+
+https://askubuntu.com/questions/38780/how-do-i-set-nomodeset-after-ive-already-installed-ubuntu
