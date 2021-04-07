@@ -1,0 +1,17 @@
+I am working on a small flask project.
+I have been working within a virtual environment with python 2.7. So I migrated to version 3.7.
+Every time I start the server, I run into this error,
+OSError: [Errno 98] Address already in use
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Here is the solution.
+Enter the following commands in the terminal
+| ps -fA | grep python
+This will select and display all the processes with python matching pattern
+Check the one with “flask” in the path and note down its PID(process ID). This should be the second column of the output.
+Then enter this command
+| kill -9 pid
+Replace pid with the PID from the previous command
+Then Restart your server
+| flask run
+And it works!!
